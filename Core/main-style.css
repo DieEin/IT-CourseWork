@@ -13,6 +13,12 @@ h1{
 .col-sm-1 a{
 	font-size: 10px;
 }
+.col-sm-2{
+	margin-top: 20px;
+}
+.page-header{
+	margin-top: 100px;
+}
 /*
 html, body {
     font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;

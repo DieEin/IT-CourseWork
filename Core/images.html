@@ -16,20 +16,26 @@
 			<div class="well">
 				<div class="page-header">
 					<h3>Does it?</h3>
-				<div>
+				</div>
 				<img src="images/DoesIt.jpeg" class="img-rounded"/>
-				<form action="" method="post"/>
-					<label>Name: <br><input type="text" name="name"/><br></label>
-					<label>Message: <br><textarea cols="45" rows="5" name="mes"></textarea></label><br>
-					<input type="submit" name="post" value="Post"/>
-				</form>
+				<div class="page-header">
+					<h3>BEL?</h3>
+				</div>
+				<img src="images/bel.jpeg" class="img-rounded"/>
 			</div>
 		</div>
 	
 	</body>
 </html>
 
-<?php
+<!--
+	<form action="" method="post"/>
+					<label>Name: <br><input type="text" name="name"/><br></label>
+					<label>Message: <br><textarea cols="45" rows="5" name="mes"></textarea></label><br>
+					<input type="submit" name="post" value="Post"/>
+				</form>
+
+
 	$name = $_POST["name"];
 	$text = $_POST["mes"];
 	$post = $_POST["post"];
@@ -60,4 +66,4 @@
 		}
 		fclose($read);
 	}
-?>
+-->
