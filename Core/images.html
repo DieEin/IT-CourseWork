@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Images</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main-style.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	
+		<div class="container">
+			<div class="col-sm-1" ><a href="main.html">Go Back</a></div>
+			<div class="well">
+				<div class="page-header">
+					<h3>Does it?</h3>
+				<div>
+				<img src="images/DoesIt.jpeg" class="img-rounded"/>
+				<form action="" method="post"/>
+					<label>Name: <br><input type="text" name="name"/><br></label>
+					<label>Message: <br><textarea cols="45" rows="5" name="mes"></textarea></label><br>
+					<input type="submit" name="post" value="Post"/>
+				</form>
+			</div>
+		</div>
+	
+	</body>
+</html>
+
+<?php
+	$name = $_POST["name"];
+	$text = $_POST["mes"];
+	$post = $_POST["post"];
+	
+	if($post) {
+		
+		#WRITE DOWN COMMENTS#
+		$write = fopen("comment.txt", "a+");
+		fwrite($write, "<u><b>$name</b></u><br>$text<br>");
+		fclose($write);
+		
+		#DISLAY COMMENTS#
+		$read = fopen("comment.txt", "r+t");
+		echo "All comments:<br>";
+		
+		while(!feof($read)) {
+			echo fread($read, 1024);
+		}
+		fclose($read);
+	}
+	else {
+		#DISLAY COMMENTS#
+		$read = fopen("comment.txt", "r+t");
+		echo "All comments:<br>";
+		
+		while(!feof($read)) {
+			echo fread($read, 1024);
+		}
+		fclose($read);
+	}
+?>
