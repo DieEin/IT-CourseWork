@@ -11,18 +11,27 @@ html, body {
 html{
 	width: 1024px;
 	height: 768px;
+	background-image: url("images/dankmeme.png");
 }
-header #logo{ 
+body{
+	background-color: transparent;
+	
+}
+header #logo{
 	margin-left: auto;
     margin-right: auto;
-    width: 70%;
+	width: 70%;
+	
 }
 header nav .menu #home {
 	float: left;
+	background-color: yellow;
 }
 header nav .menu #other{
 	float: right;
+	background-color: yellow;
 }
+
 li{
 	list-style-type: none;
 	float: left;
