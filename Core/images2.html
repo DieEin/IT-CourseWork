@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="main-style.css"/>
+		<link rel="stylesheet" href="images-style.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
@@ -18,10 +19,22 @@
 					<h3>Thug life</h3>
 				</div>
 				<img src="images/soCool.jpg" class="img-rounded"/>
+				<br/>
+				<br/>
+				<div>
+					Rating: 
+					<span class="stars">3.5</span>
+				</div>
 				<div class="page-header">
 					<h3>Story bro cool</h3>
 				</div>
 				<img src="images/invert.jpg" class="img-rounded"/>
+				<br/>
+				<br/>
+				<div>
+					Rating: 
+					<span class="stars">5</span>
+				</div>
 			</div>
 			<ul class="pagination">
 				<li><a href="images.html">0</a></li>
@@ -29,6 +42,22 @@
 				<li class="disabled"><a href="images2.html">2</a></li>
 			</ul>
 		</div>
-	
+		<script>
+			$.fn.stars = function() {
+				return $(this).each(function() {
+					// Get the value
+					var val = parseFloat($(this).html());
+					// Make sure that the value is in 0 - 5 range, multiply to get width
+					var size = Math.max(0, (Math.min(5, val))) * 16;
+					// Create stars holder
+					var $span = $('<span />').width(size);
+					// Replace the numerical value with stars
+					$(this).html($span);
+				});
+			}
+			$(function() {
+				$('span.stars').stars();
+			});
+		</script>
 	</body>
 </html>

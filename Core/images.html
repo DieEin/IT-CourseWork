@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel="stylesheet" href="main-style.css"/>
+		<link rel="stylesheet" href="images-style.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
@@ -17,10 +18,28 @@
 					<h3>Does it?</h3>
 				</div>
 				<img src="images/DoesIt.jpeg" class="img-rounded"/>
+				
+				<br/>
+				<!--<form action="demo_form.asp" onsubmit="meinFunction()">
+					Rate: <input type="text" name="fname" id="rate">
+					<button type="button" onclick="myFunction()">Submit</button>
+				</form>-->
+				<br/>
+				<div>
+					Rating: 
+					<span class="stars">4.5</span>
+				</div>
 				<div class="page-header">
 					<h3>BEL?</h3>
 				</div>
 				<img src="images/bel.jpeg" class="img-rounded"/>
+				
+				<br/>
+				<br/>
+				<div>
+					Rating: 
+					<span class="stars">4</span>
+				</div>
 			</div>
 			<br/>
 			<form action="demo_form.asp" onsubmit="myFunction()">
@@ -37,10 +56,31 @@
 			</ul>
 		</div>
 		<script>
+			/*function myFunction() {
+				var rate_element = document.getElementById('rate');
+				var rate = name_element.value;
+			}*/
+			$.fn.stars = function() {
+				return $(this).each(function() {
+					// Get the value
+					var val = parseFloat($(this).html());
+					// Make sure that the value is in 0 - 5 range, multiply to get width
+					var size = Math.max(0, (Math.min(5, val))) * 16;
+					// Create stars holder
+					var $span = $('<span />').width(size);
+					// Replace the numerical value with stars
+					$(this).html($span);
+				});
+			}
+			$(function() {
+				$('span.stars').stars();
+			});
+			
+		
 			function myFunction() {
 				var name_element = document.getElementById('name_name');
 				var name = name_element.value;
-				document.getElementById("comments").innerHTML = name + 'there';
+				document.getElementById("comments").innerHTML = 'Oh hello ' + name + ', how are you?';
 			}
 		</script> <!--may have to use: https://github.com/eligrey/FileSaver.js -->
 	</body>
