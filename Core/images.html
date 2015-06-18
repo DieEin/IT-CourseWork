@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="col-sm-1" ><a href="index.html">Go Back</a></div>
+			<div class="col-sm-1" id="goBack"><a href="index.html" style="font-size: 10px;">Go Back</a></div>
 			<div class="well">
 				<div class="page-header">
 					<h3>Does it?</h3>
@@ -22,14 +22,14 @@
 				</div>
 				<img src="images/bel.jpeg" class="img-rounded"/>
 			</div>
-			
-			<p id="comments">
-			</p>
-			
+			<br/>
 			<form action="demo_form.asp" onsubmit="myFunction()">
 				Enter name: <input type="text" name="fname" id="name_name">
 				<button type="button" onclick="myFunction()">Submit</button>
 			</form>
+			<br/>
+			<p id="comments">
+			</p>
 			<ul class="pagination">
 				<li class="disabled"><a href="images.html">0</a></li>
 				<li><a href="images1.html">1</a></li>
@@ -40,9 +40,9 @@
 			function myFunction() {
 				var name_element = document.getElementById('name_name');
 				var name = name_element.value;
-				document.getElementById("comments").innerHTML = name;
+				document.getElementById("comments").innerHTML = name + 'there';
 			}
-		</script>
+		</script> <!--may have to use: https://github.com/eligrey/FileSaver.js -->
 	</body>
 </html>
 
