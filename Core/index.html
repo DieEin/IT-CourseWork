@@ -56,8 +56,18 @@
 							<p class="text-danger">It's all about the errors.</p>
 						</dl>
 					</dl>
-				<div>
+				</div>
 			</div>
 		</main>
+		<script>
+			$(document).ready(function(){
+				$("p").hover(function(){
+					$(this).hide();
+				});
+				$("h1").click(function() {
+					$("p").toggle();
+				});
+			});
+		</script>
 	</body>
 </html>

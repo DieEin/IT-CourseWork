@@ -10,7 +10,9 @@ a:hover{
 h1{
 	margin-top: 25px;
 }
-
+.text-danger, .text-primary{
+	display: inline-block;
+}
 .col-sm-1 {
 	margin-top: 20px;
 }
