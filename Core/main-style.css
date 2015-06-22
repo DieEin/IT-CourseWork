@@ -26,6 +26,12 @@ div .well img{
 	width: 380px;
 	height: 500px;
 }
+.jumbotron{
+	background-color: black;
+}
+#inJN{
+	color: white;
+}
 /*
 html, body {
     font-family: 'Segoe UI', 'Segoe UI Web', 'Segoe UI Symbol', 'Helvetica Neue', 'BBAlpha Sans', 'S60 Sans', Arial, sans-serif;

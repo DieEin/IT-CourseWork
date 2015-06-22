@@ -18,7 +18,7 @@
 					<h3>Does it?</h3>
 				</div>
 				<img src="images/DoesIt.jpeg" class="img-rounded"/>
-				
+				<p style="float-right">This is a very interestingly hidden text!</p>
 				<br/>
 				<!--<form action="demo_form.asp" onsubmit="meinFunction()">
 					Rate: <input type="text" name="fname" id="rate">
@@ -47,8 +47,6 @@
 				<button type="button" onclick="myFunction()">Submit</button>
 			</form>
 			<br/>
-			<p id="comments">
-			</p>
 			<ul class="pagination">
 				<li class="disabled"><a href="images.html">0</a></li>
 				<li><a href="images1.html">1</a></li>
@@ -74,6 +72,14 @@
 			}
 			$(function() {
 				$('span.stars').stars();
+			});
+			
+			
+			$(document).ready(function(){
+				$(".img-rounded").hide();
+				$(".img-rounded").click(function() {
+					$("p").toggle();
+				});
 			});
 			
 		
